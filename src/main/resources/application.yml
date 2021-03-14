@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/loja?user=loja&password=loja"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dll-auto: create
+        dialect: org.hibernate.dialect.PostgreSQLDialect

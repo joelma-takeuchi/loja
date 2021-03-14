@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./docker/postgres-multiple-databases.sh:/docker-entrypoint-initdb.d/postgres-multiple-databases.sh
+    restart: always
+    hostname: bancoLoja
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=loja
+      - POSTGRES_PASSWORD=loja
